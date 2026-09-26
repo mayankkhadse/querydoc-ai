@@ -8,7 +8,7 @@ from docx import Document
 
 client = genai.Client(api_key=os.environ["GEMINI_API_KEY"])
 
-# Agar ek model deprecate/unavailable ho jaye, code khud agla try karega
+
 MODEL_CANDIDATES = [
     "gemini-3.5-flash-lite",
     "gemini-2.5-flash-lite",
@@ -16,7 +16,7 @@ MODEL_CANDIDATES = [
     "gemini-3.8-flash",
 ]
 
-_working_model = {"name": None}  # jo model kaam kar gaya usko yaad rakhta hai
+_working_model = {"name": None}
 
 
 def extract_text(file_path):
