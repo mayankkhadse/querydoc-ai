@@ -1,7 +1,6 @@
 import streamlit as st
 import os
 
-# Streamlit Cloud pe deploy karte waqt secrets se API key uthane ke liye
 if "GEMINI_API_KEY" not in os.environ and hasattr(st, "secrets") and "GEMINI_API_KEY" in st.secrets:
     os.environ["GEMINI_API_KEY"] = st.secrets["GEMINI_API_KEY"]
 
